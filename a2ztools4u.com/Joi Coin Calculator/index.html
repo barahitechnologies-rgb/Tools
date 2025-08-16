@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jio Coin Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<!-- Header Menu -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">A2ZTools</div>
+            <div class="menu">
+                <a href="/">Home</a>
+                <a href="/tools">All Tools</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+	<br />
+  <div class="calculator-container">
+    <h1>Jio Coin Calculator</h1>
+    <form id="jio-coin-form">
+      <div class="input-group">
+        <label for="hours">Hours Used Per Day:</label>
+        <input type="number" id="hours" placeholder="Enter hours">
+      </div>
+      <button type="submit">Calculate</button>
+    </form>
+
+    <!-- Result Table -->
+    <div id="result" class="result">
+      <h2>Projection Over 20 Years</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Coins Earned</th>
+            <th>Low (5%)</th>
+            <th>Medium (25%)</th>
+            <th>High (100%)</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- Rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Projection Chart -->
+    <div class="chart-container">
+      <canvas id="projectionChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Separate Div for Long Content -->
+  <div class="long-content">
+    <h2>About Jio Coin</h2>
+    <p>
+      Jio Coin is a revolutionary cryptocurrency designed to reward users for their engagement and usage of the Jio ecosystem. By simply spending time on Jio platforms, users can earn Jio Coins, which can be used for various services, products, and even converted to other currencies.
+    <br >
+   The Jio Coin Calculator helps you estimate how many coins you can earn over time based on your daily usage. Whether you're a casual user or a power user, this tool provides insights into your potential earnings and growth projections.
+   <br >Start using the calculator above to see how your daily hours can translate into significant rewards over the years!
+    </p>
+	<h2>Type of Jio Coins & how it operate</h2>
+  <section>
+    <p>Jio Coins are a type of <strong>digital reward</strong> introduced by Jio, one of India's leading telecom and digital services providers. These coins are designed to reward users for their engagement with the Jio ecosystem, which includes services like Jio mobile networks, Jio Fiber, JioMart, JioSaavn, JioTV, and more. Think of Jio Coins as a <strong>loyalty reward system</strong> where you earn coins for using Jio services, and these coins can later be redeemed for various benefits.</p>
+    <p>Jio Coins operate on a <strong>blockchain-based system</strong>, ensuring transparency, security, and ease of transactions. They are part of Jio's vision to create a <strong>digital economy</strong> where users are rewarded for their time and engagement.</p>
+  </section>
+  <section>
+    <h2>How to Earn Free Jio Coins</h2>
+    <p>Earning Jio Coins is simple and straightforward. Here’s how you can earn them:</p>
+   <ul>
+      <p><strong>Using Jio Services:</strong> Every time you use Jio services like Jio mobile data, Jio Fiber, JioMart, or Jio apps (JioSaavn, JioTV, etc.), you earn Jio Coins. The more you use these services, the more coins you earn.</li>
+      <p><strong>Participating in Promotions:</strong> Jio often runs promotional campaigns where users can earn bonus coins by completing specific tasks, such as referring friends, participating in surveys, or watching ads.</li>
+      <p><strong>Daily Check-ins:</strong> Some Jio apps offer daily check-in rewards. Simply open the app, check in, and earn coins.</li>
+      <p><strong>Gaming and Entertainment:</strong> Jio platforms like JioGames and JioCinema may reward users with coins for playing games or watching content.</li>
+      <p><strong>Shopping on JioMart:</strong> When you shop on JioMart, you earn coins based on your purchase value.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How to Redeem Jio Coins</h2>
+    <p>Once you’ve earned Jio Coins, you can redeem them for a variety of benefits, including:</p>
+    <ul>
+      <p><strong>Discounts on Jio Services:</strong> Use your coins to get discounts on Jio mobile recharges, Jio Fiber plans, or other Jio services.</li>
+      <p><strong>Shopping on JioMart:</strong> Redeem coins for discounts on groceries and daily essentials purchased through JioMart.</li>
+      <p><strong>Entertainment:</strong> Use coins to unlock premium content on JioSaavn, JioCinema, or JioTV.</li>
+      <p><strong>Gaming:</strong> Redeem coins for in-game purchases or premium features on JioGames.</li>
+      <p><strong>Cashback and Vouchers:</strong> Convert your coins into cashback or vouchers for popular brands and platforms.</li>
+      <p><strong>Donations:</strong> Jio also allows users to donate their coins to charitable causes.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Benefits of Jio Coins</h2>
+    <p>Jio Coins offer several benefits to users:</p>
+    <ul>
+      <p><strong>Rewards for Loyalty:</strong> Jio Coins reward you for being a loyal customer of Jio services. The more you use Jio, the more you earn.</li>
+      <p><strong>Cost Savings:</strong> By redeeming coins, you can save money on recharges, shopping, and entertainment.</li>
+      <p><strong>Flexibility:</strong> Jio Coins can be used across a wide range of Jio services, giving you the flexibility to choose how you want to spend them.</li>
+      <p><strong>Transparency and Security:</strong> Since Jio Coins are based on blockchain technology, all transactions are secure and transparent.</li>
+      <p><strong>Encourages Digital Engagement:</strong> Jio Coins encourage users to explore and engage with the Jio ecosystem, enhancing their digital experience.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How We Calculate Jio Coin Price Prediction for 1 to 20 Years</h2>
+    <p>The Jio Coin Calculator helps you estimate how many coins you can earn over time and their potential value. Here’s how the calculation works:</p>
+    <h3>Step 1: Input Your Usage</h3>
+    <p>Enter the <strong>number of hours</strong> you spend using Jio services daily. For example, if you use Jio apps for 2 hours a day, enter "2."</p>
+    <h3>Step 2: Coins Earned Per Year</h3>
+    <p>Jio Coins are earned based on your usage. For example:</p>
+    <ul>
+      <p>If you earn <strong>46.8 coins per hour per year</strong>, using Jio services for 2 hours a day would earn you:
+        <pre>46.8 × 2 = 93.6 coins per year.</pre>
+      </li>
+    </ul>
+    <h3>Step 3: Annual Growth</h3>
+    <p>The calculator assumes a <strong>10% annual growth</strong> in coins earned. This means your earnings increase by 10% each year due to increased engagement or higher rewards.</p>
+    <ul>
+      <p>Year 1: 93.6 coins</li>
+      <p>Year 2: 93.6 × 1.10 = 102.96 coins</li>
+      <p>Year 3: 102.96 × 1.10 = 113.26 coins</li>
+      <p>And so on.</li>
+    </ul>
+    <h3>Step 4: Projections for Low, Medium, and High Scenarios</h3>
+    <p>The calculator provides three growth scenarios for your Jio Coins:</p>
+    <ul>
+      <p><strong>Low (5%):</strong> Assumes a conservative growth rate of 5% per year.</li>
+      <p><strong>Medium (25%):</strong> Assumes a moderate growth rate of 25% per year.</li>
+      <p><strong>High (100%):</strong> Assumes an aggressive growth rate of 100% per year.</li>
+    </ul>
+    <h3>Step 5: Visualizing Growth</h3>
+    <p>The calculator also includes a <strong>projection chart</strong> that shows how your coins grow over 20 years for each scenario (Low, Medium, High). This helps you visualize the potential value of your Jio Coins.</p>
+  </section>
+
+  <section>
+    <h2>Why Use the Jio Coin Calculator?</h2>
+    <p>The Jio Coin Calculator is a powerful tool for:</p>
+    <ul>
+      <p><strong>Planning Your Earnings:</strong> Estimate how many coins you can earn based on your daily usage.</li>
+      <p><strong>Understanding Growth Potential:</strong> See how your coins can grow over time with different growth rates.</li>
+      <p><strong>Making Informed Decisions:</strong> Use the projections to decide how to spend or invest your Jio Coins.</li>
+      <p><strong>Maximizing Benefits:</strong> Identify the best ways to earn and redeem coins for maximum value.</li>
+    </ul>
+  </section>
+    <h2>Conclusion</h2>
+    <p>Jio Coins are a game-changer in the world of digital rewards. By simply using Jio services, you can earn coins that translate into real-world benefits like discounts, cashback, and more. The Jio Coin Calculator helps you understand how your daily usage can lead to significant rewards over time.</p>
+    <p>Whether you're a casual user or a power user, Jio Coins offer something for everyone. Start using the calculator today to see how your engagement with Jio can turn into valuable rewards over the years. With transparency, flexibility, and growth potential, Jio Coins are your gateway to a smarter and more rewarding digital experience.</p>
+  </div>
+    </div>
+<!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <a href="/about">About A2ZTools</a>
+                <a href="/blog">Blog</a>
+            </div>
+            <div class="footer-section">
+                <h4>Tools</h4>
+                <a href="/pdf-tools">PDF Tools</a>
+                <a href="/image-tools">Image Tools</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>
